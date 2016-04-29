@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dip"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/titleLeft"
+            style="@style/title_style_right"
+            android:layout_marginLeft="5dip"
+            android:text="@string/action_cancel" />
+
+        <TextView
+            android:id="@+id/titleText"
+            style="@style/title_style_center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:text="@string/record_camera_import_video_folder_title" >
+        </TextView>
+
+    </RelativeLayout>
+
+    <include layout="@layout/include_listview" />
+
+</LinearLayout>

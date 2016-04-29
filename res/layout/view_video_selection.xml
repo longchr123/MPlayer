@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cut_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/video_mode_controller_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+       <TextView
+            android:id="@+id/selection_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="6dp"
+            android:textColor="@color/color_23232b"
+            android:textSize="18sp" /> 
+        
+        
+        
+
+        <RadioGroup
+            android:id="@+id/radiogroup_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/change_videoview_mode"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="@string/background_color_textview"
+                android:textColor="@color/button_black_background"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/backgroud_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@drawable/play_mode_background_black_bg"
+                android:checked="true"
+                android:contentDescription="@string/imageview_content_description" />
+
+            <RadioButton
+                android:id="@+id/backgroud_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/play_mode_background_white_bg"
+                android:contentDescription="@string/imageview_content_description" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/change_videoview_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/checkbox_play_video_switch_mode"
+            android:checked="true"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/video_mode_controller_layout"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 视频截图 -->
+
+    <com.yixia.camera.demo.ui.record.views.HorizontalScrollViewEx
+        android:id="@+id/video_thumbnails_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/video_mode_controller_layout"
+        android:background="@color/import_video_thumb_bg"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/video_thumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="56dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="18dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.yixia.camera.demo.ui.record.views.HorizontalScrollViewEx>
+
+    <!-- 图片覆盖 -->
+
+    <com.yixia.camera.demo.ui.record.views.SelectionView
+        android:id="@+id/video_selection"
+        android:layout_width="match_parent"
+        android:layout_height="56dip"
+        android:layout_below="@+id/video_mode_controller_layout"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="5dip" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/video_thumbnails_background"
+        android:layout_alignTop="@+id/video_thumbnails_background"
+        android:paddingLeft="3dip"
+        android:paddingRight="3dip" >
+
+        <ImageView
+            android:id="@+id/video_selection_seek_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/imageview_content_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/video_selection_seek_selector" />
+
+        <ImageView
+            android:id="@+id/video_selection_seek_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/imageview_content_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/video_selection_seek_selector" />
+    </RelativeLayout>
+
+</RelativeLayout>

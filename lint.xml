@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="InflateParams" severity="ignore" />
+    <issue id="NewApi" severity="ignore">
+        <ignore path="src/com/lcr/fragment/HomePageVideoFragment.java" />
+    </issue>
+    <issue id="SdCardPath" severity="ignore" />
+    <issue id="ShowToast" severity="ignore" />
+</lint>

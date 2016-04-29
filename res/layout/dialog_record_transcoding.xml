@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="15dip" >
+
+    <com.yixia.camera.demo.ui.widget.ProgressWheel
+        android:id="@+id/progress"
+        android:layout_width="68dip"
+        android:layout_height="68dip"
+        ProgressWheel:barColor="@color/yellow"
+        ProgressWheel:barLength="34dp"
+        ProgressWheel:barWidth="5dp"
+        ProgressWheel:incrementMode="true"
+        ProgressWheel:rimColor="#44000000"
+        ProgressWheel:rimProgress="0"
+        ProgressWheel:rimWidth="7dp"
+        ProgressWheel:spinSpeed="2dp"
+        ProgressWheel:textColor="@color/white"
+        ProgressWheel:textSize="14sp" />
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myradio="http://schemas.android.com/apk/res/com.lcr.mplay"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.lcr.widget.CustomViewPager
+            android:id="@+id/vp_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_1"
+            android:paddingBottom="50dp"
+            android:paddingTop="50dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00000000" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:onClick="MenuInfo"
+                android:text="menu"
+                android:background="#00000000" />
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="首页"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+		<LinearLayout 
+		    android:id="@+id/layout_menu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+		    >
+		    <Button 
+		        android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/layout_cancel"
+            android:layout_weight="1"
+            android:text="取消"
+		        />
+		    <Button 
+		        android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/layout_play"
+            android:layout_weight="1"
+            android:text="播放"
+		        />
+		</LinearLayout>        
+        <RadioGroup
+            android:id="@+id/group_menu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00000000"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.lcr.widget.MyRadioButton
+                android:id="@+id/btn_home"
+                style="@style/radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="true"
+                android:text="首页"
+                myradio:drawableSize="30dp"
+                myradio:drawableTop="@drawable/home_page_icon" />
+
+            <com.lcr.widget.MyRadioButton
+                android:id="@+id/btn_local"
+                style="@style/radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="本地视频"
+                myradio:drawableSize="30dp"
+                myradio:drawableTop="@drawable/local_video_icon" />
+
+            <com.lcr.widget.MyRadioButton
+                android:id="@+id/btn_recoder"
+                style="@style/radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:text="录视频"
+                myradio:drawableSize="30dp"
+                myradio:drawableTop="@drawable/record_video_icon" />
+
+            <com.lcr.widget.MyRadioButton
+                android:id="@+id/btn_works"
+                style="@style/radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:text="我的作品"
+                myradio:drawableSize="30dp"
+                myradio:drawableTop="@drawable/my_works_icon" />
+
+            <com.lcr.widget.MyRadioButton
+                android:id="@+id/btn_setting"
+                style="@style/radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:text="设置"
+                myradio:drawableSize="30dp"
+                myradio:drawableTop="@drawable/setting_icon" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <include  layout="@layout/left_menu"
+         android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/list_left_drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

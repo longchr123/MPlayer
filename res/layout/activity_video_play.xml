@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.lcr.widget.VideoView
+        android:id="@+id/videoview"
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_control_play"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="vertical" >
+
+        <include layout="@layout/videoplayer_control" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在加载..." />
+    </LinearLayout>
+
+</RelativeLayout>

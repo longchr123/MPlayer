@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyRadioButton">  
+          
+        <attr name="drawableSize" format="dimension"/>  
+        <attr name="drawableTop" format="reference"/>  
+        <attr name="drawableLeft" format="reference"/>  
+        <attr name="drawableRight" format="reference"/>  
+        <attr name="drawableBottom" format="reference"/>  
+          
+    </declare-styleable>
+    
+    <declare-styleable name="ProgressWheel">
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="barColor" format="color" />
+        <attr name="rimColor" format="color" />
+        <attr name="rimWidth" format="dimension" />
+        <attr name="spinSpeed" format="dimension" />
+        <attr name="delayMillis" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="barLength" format="dimension" />
+        <attr name="rimProgress" format="integer" />
+        <attr name="incrementMode" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="SettingView">  
+        <attr name="titleText" format="string" />  
+        <attr name="contentText" format="string"/>  
+        <attr name="img" format="reference"/>
+    </declare-styleable>  
+    
+     <attr name="rightPadding" format="dimension">
+    </attr>
+    <declare-styleable name="SlidingMenu">
+         <attr name="rightPadding">
+    </attr>
+    </declare-styleable>
+    
+    <declare-styleable name="CircularImage">  
+       <attr name="border_width" format="dimension" />  
+       <attr name="border_color" format="color" />  
+   </declare-styleable> 
+    
+</resources>

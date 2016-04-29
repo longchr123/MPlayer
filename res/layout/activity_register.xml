@@ -1,0 +1,95 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".com.qst.addresslist.activity.LoginActivity"
+    android:stretchColumns="0,3"
+    android:gravity="center_vertical"
+    android:background="#66FF66"
+    >
+
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="   请输入手机号:"/>
+        <EditText
+            android:id="@+id/et_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入11位数字"
+             android:inputType="phone"
+            android:minWidth="200dp"/>
+        <TextView />
+    </TableRow>
+    
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="   请输入用户名:"/>
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入英文或数字"
+            android:minWidth="200dp"/>
+        <TextView />
+    </TableRow>
+
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="   请输入密 码:"
+            />
+        <EditText
+            android:id="@+id/et_pwd"
+            android:inputType="textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            />
+        <TextView />
+    </TableRow>
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="   请确认密 码:"
+            />
+        <EditText
+            android:id="@+id/et_pwd_confirm"
+            android:inputType="textPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            />
+        <TextView />
+    </TableRow>
+
+    <TableRow>
+        <TextView />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_cancle"
+            android:text="取消"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_login"
+            android:text="注册"/>
+        <TextView />
+    </TableRow>
+
+</TableLayout>

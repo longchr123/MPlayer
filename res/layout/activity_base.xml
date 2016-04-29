@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <FrameLayout
+        android:id="@+id/fl_titlebar"
+        android:background="#8B4726"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+         >
+    
+	<Button
+	    android:id="@+id/btn_left"
+	    android:text="返回"
+	    android:textSize="10sp"
+	    android:layout_width="45dp"
+        android:layout_height="45dp"/>
+	<TextView 
+	    android:id="@+id/tv_title"
+	    android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="功能列表"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+	
+	<Button
+	    android:id="@+id/btn_right"
+	    android:text="更多"
+	    android:textSize="10sp"
+	    android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="right"/>
+	</FrameLayout>
+	
+    <LinearLayout 
+         android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:id="@+id/ll_child"/>"
+    
+</LinearLayout>

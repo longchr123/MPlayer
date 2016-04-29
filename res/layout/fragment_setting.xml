@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setting="http://schemas.android.com/apk/res/com.lcr.mplay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+     >
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/text_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:text="首页面设置"
+            android:textSize="20sp" 
+            android:textColor="#000000"/>
+        
+        <com.lcr.widget.SettingItem
+            android:id="@+id/setting_layout_format"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            setting:titleText="首页面布局格式切换"
+            setting:contentText="瀑布流格式"
+            setting:img="@drawable/ic_battery_100"
+             />
+        
+        <com.lcr.widget.SettingItem
+            android:id="@+id/setting_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            setting:titleText="应用背景改变"
+            setting:contentText="系统——浅绿"
+            setting:img="@drawable/ic_battery_100"
+             />
+    </LinearLayout>
+ 
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    
+</RelativeLayout>

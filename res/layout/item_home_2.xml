@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:clickable="false"
+        android:textColor="#668800" />
+
+    <com.lcr.widget.MyTextureView
+        android:id="@+id/texturevideo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="6dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="6dp"
+        android:clickable="true"
+        android:src="@drawable/bg_1" />
+
+    <TextView
+        android:id="@+id/text_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:clickable="false"
+        android:text="来自 long 的神评论："
+        android:textColor="#ff5500"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:clickable="false"
+        android:text="这是一个相当檡加拉斯个榅 枯柶本核大国颗不需要觉得该上来讲电视监控"
+        android:textColor="#bb000000"
+        android:textSize="16sp" />
+
+</LinearLayout>
